@@ -8,7 +8,7 @@
     --gris-clair:#EEE;
 
 }
-*{
+{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -205,6 +205,6 @@ footer div {
     transition: color 0.3s ease, transform 0.2s ease;
 }
 footer div:hover {
-    color:var(--orange-vif)
+    color:var(--orange-vif);
     transform: translateY(-3px);
 }
