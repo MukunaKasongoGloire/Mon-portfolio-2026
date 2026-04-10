@@ -368,29 +368,7 @@ footer div:hover {
 .contact-form button:hover {
     background: var(--violet-fonce);
 }
-[14:19, 09/04/2026] Glodie Mukunda: <section class="projects">
-    <h2>Mes Réalisations</h2>
-    <div class="underline"></div>
-
-    <div class="projects-container">
-
-        <!-- Carte 1 -->
-        <div class="card">
-            <img src="Images/image_E-commerce.jpeg" alt="">
-            <div class="card-content">
-                <h3>Site E-commerce</h3>
-                <p>Une boutique en ligne complète développée avec HTML, CSS et JavaScript pur.</p>
-
-                <div class="tags">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JS</span>
-                </div>
-
-                <div class="links">
-    <a href="#"><i class="fa-brands fa-github"></i> Code</a>
-    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Démo</a>…
-[14:41, 09/04/2026] Glodie Mukunda: .projects {
+.projects {
     text-align: center;
     padding: 60px 10%;
     background: #f8f9fb;
@@ -400,8 +378,6 @@ footer div:hover {
     font-size: 32px;
     color: #6c63ff;
 }
-
-
 
 .projects-container {
     display: grid;
@@ -472,6 +448,7 @@ footer div:hover {
 .links a:hover {
     color: #6c63ff;
 }
+/*CONTACTS*/
 .contact-info a {
     color: var(--violet-doux);
     font-weight: bold;
@@ -508,6 +485,7 @@ footer div:hover {
 .contact-card h2 {
     color: var(--violet-doux);
     margin-bottom: 1rem;
+    font-size: 1.2rem;
 }
 
 .contact-card p {
@@ -579,3 +557,273 @@ footer div:hover {
         width: 100%;
     }
 }
+/* HERO DIVERTISSEMENT */
+.div-hero {
+    height: 40vh;
+    background:var(--gris-clair);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.div-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: var(--violet-doux);
+
+}
+
+.div-hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    color: var(--gris-fonce);
+}
+
+/* SECTION */
+.divertissement {
+    width: 90%;
+    margin: 4rem auto;
+}
+
+/* GRID */
+.div-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+/* CARD */
+.div-card {
+    position: relative;
+    height: 320px;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+/* IMAGE */
+.div-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease, filter 0.6s ease;
+}
+
+/* DARK EFFECT */
+.div-card:hover img {
+    transform: scale(1.15);
+    filter: brightness(0.6);
+}
+
+/* OVERLAY */
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 25px;
+    color: white;
+    transform: translateY(100%);
+    transition: transform 0.5s ease;
+}
+
+/* SHOW TEXT */
+.div-card:hover .overlay {
+    transform: translateY(0);
+}
+
+/* TEXT STYLE */
+.overlay h2 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.overlay p {
+    font-size: 0.95rem;
+}
+
+/* LIGHT EFFECT */
+.div-card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.2), transparent);
+    transform: rotate(25deg);
+    opacity: 0;
+    transition: 0.6s;
+}
+
+.div-card:hover::before {
+    opacity: 1;
+    animation: shine 1s ease;
+}
+
+@keyframes shine {
+    from {
+        transform: translateX(-100%) rotate(25deg);
+    }
+    to {
+        transform: translateX(100%) rotate(25deg);
+    }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .div-hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .div-card {
+        height: 250px;
+    }
+}
+
+/*PASSION*/
+.passion-hero {
+    text-align: center;
+    padding: 3rem 2rem;
+}
+
+.passion-hero h1 {
+    font-size: 2rem;
+    color: var(--violet-doux);
+}
+
+.passion-hero p {
+    color: var(--gris-fonce);
+}
+
+/* SECTION */
+.passion {
+    width: 90%;
+    margin: auto;
+}
+
+/* CARTE */
+.passion-item {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* INVERSE */
+.reverse {
+    flex-direction: row-reverse;
+}
+
+/* TEXTE */
+.text {
+    flex: 1;
+}
+
+.text h2 {
+    color: var(--violet-doux);
+}
+
+.text p {
+    color: var(--gris-fonce);
+}
+
+/* IMAGE */
+.image {
+    flex: 1;
+}
+
+.image img {
+    width: 100%;
+    border-radius: 10px;
+}
+/* CARTE AMÉLIORÉE */
+.passion-item {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    padding: 1.5rem;
+    border-radius: 15px;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+/* EFFET HOVER */
+.passion-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+/* IMAGE STYLE */
+.image {
+    flex: 1;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.image img {
+    width: 100%;
+    transition: transform 0.4s ease;
+}
+
+/* ZOOM IMAGE */
+.passion-item:hover img {
+    transform: scale(1.08);
+}
+
+/* TEXTE AMÉLIORÉ */
+.text h2 {
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+.text p {
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* PETIT EFFET BARRE DESIGN */
+.text h2::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--violet-doux);
+    margin-top: 5px;
+    border-radius: 5px;
+}
+/* REDUIRE LA TAILLE DES IMAGES */
+.image {
+    flex: 0.8; /* au lieu de 1 */
+}
+
+.text {
+    flex: 1.2;
+}
+
+/* HAUTEUR CONTROLEE */
+.image img {
+    height: 220px;
+    object-fit: cover;
+}
+/* ANIMATION DE BASE */
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.6s ease;
+}
+
+/* QUAND VISIBLE */
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+.text h2::after {
+    display: none;
+}
+
