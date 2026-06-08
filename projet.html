@@ -10,24 +10,25 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body data-page="projet">
 <header>
     <div>
         <a href="">Mon portfolio</a>
     </div>
     <nav>
         <ul>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="projet.html" class="active">Projet</a></li>
-            <li><a href="passion.html">Passion</a></li>
-            <li><a href="Divertissement.html">Divertissement</a></li>
-            <li><a href="contact.html" >contact</a></li>
+            <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+            <li><a href="projet.html" class="active" data-i18n="nav.projects">Projet</a></li>
+            <li><a href="passion.html" data-i18n="nav.passion">Passion</a></li>
+            <li><a href="Divertissement.html" data-i18n="nav.entertainment">Divertissement</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">contact</a></li>
         </ul>
     </nav>
+    <button id="theme-toggle" class="theme-toggle-button">Changer l'apparence</button>
 </header>
 <main>
     <section class="projects">
-    <h2>Mes Réalisations</h2>
+    <h2 data-i18n="projet.title">Mes Réalisations</h2>
     <div class="underline"></div>
 
     <div class="projects-container">
@@ -36,8 +37,8 @@
         <div class="card">
             <img src="Image/Site E-Commerce.JPG" alt="E-Commerce">
             <div class="card-content">
-                <h3>Site E-commerce</h3>
-                <p>Une boutique en ligne complète développée avec HTML, CSS et JavaScript pur.</p>
+                <h3 data-i18n="projet.card1.title">Site E-commerce</h3>
+                <p data-i18n="projet.card1.desc">Une boutique en ligne complète développée avec HTML, CSS et JavaScript pur.</p>
 
                 <div class="tags">
                     <span>HTML</span>
@@ -46,8 +47,8 @@
                 </div>
 
                 <div class="links">
-    <a href="#"><i class="fa-brands fa-github"></i> Code</a>
-    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Démo</a>
+    <a href="#" data-i18n="common.code"><i class="fa-brands fa-github"></i> Code</a>
+    <a href="#" data-i18n="common.demo"><i class="fa-solid fa-arrow-up-right-from-square"></i> Démo</a>
 </div>
                 
             </div>
@@ -57,8 +58,8 @@
         <div class="card">
             <img src="Image/Gestionnaire de Taches.JPG" alt="gestionnaire de Taches">
             <div class="card-content">
-                <h3>Gestionnaire de Tâches</h3>
-                <p>Application web pour organiser ses projets quotidiens avec stockage local.</p>
+                <h3 data-i18n="projet.card2.title">Gestionnaire de Tâches</h3>
+                <p data-i18n="projet.card2.desc">Application web pour organiser ses projets quotidiens avec stockage local.</p>
 
                 <div class="tags">
                     <span>Python</span>
@@ -66,8 +67,8 @@
                 </div>
 
                 <div class="links">
-    <a href="#"><i class="fa-brands fa-github"></i> Code</a>
-    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Démo</a>
+    <a href="#" data-i18n="common.code"><i class="fa-brands fa-github"></i> Code</a>
+    <a href="#" data-i18n="common.demo"><i class="fa-solid fa-arrow-up-right-from-square"></i> Démo</a>
 </div>
             </div>
         </div>
@@ -76,8 +77,8 @@
         <div class="card">
             <img src="Image/blog personnel.JPG" alt="blog personnel">
             <div class="card-content">
-                <h3>Blog Personnel</h3>
-                <p>Projet en cours de migration vers Laravel pour apprendre le backend.</p>
+                <h3 data-i18n="projet.card3.title">Blog Personnel</h3>
+                <p data-i18n="projet.card3.desc">Projet en cours de migration vers Laravel pour apprendre le backend.</p>
 
                 <div class="tags">
                     <span>PHP</span>
@@ -85,8 +86,8 @@
                 </div>
 
                 <div class="links">
-    <a href="#"><i class="fa-brands fa-github"></i> Code</a>
-    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Bientot</a>
+    <a href="#" data-i18n="common.code"><i class="fa-brands fa-github"></i> Code</a>
+    <a href="#" data-i18n="common.soon"><i class="fa-solid fa-arrow-up-right-from-square"></i> Bientot</a>
 </div>
             </div>
         </div>
@@ -95,8 +96,8 @@
         <div class="card">
             <img src="Image/Dashboard d'analyse.JPG" alt="">
             <div class="card-content">
-                <h3>Dashboard d'Analyse</h3>
-                <p>Visualisation de données dynamiques avec Python et la bibliothèque Matplotlib.</p>
+                <h3 data-i18n="projet.card4.title">Dashboard d'Analyse</h3>
+                <p data-i18n="projet.card4.desc">Visualisation de données dynamiques avec Python et la bibliothèque Matplotlib.</p>
 
                 <div class="tags">
                     <span>Python</span>
@@ -104,8 +105,8 @@
                 </div>
 
                <div class="links">
-    <a href="#"><i class="fa-brands fa-github"></i> Code</a>
-    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Démo</a>
+    <a href="#" data-i18n="common.code"><i class="fa-brands fa-github"></i> Code</a>
+    <a href="#" data-i18n="common.demo"><i class="fa-solid fa-arrow-up-right-from-square"></i> Démo</a>
 </div>
             </div>
         </div>
@@ -114,8 +115,8 @@
         <div class="card">
             <img src="Image/Application météo.JPG" alt="">
             <div class="card-content">
-                <h3>Application Météo</h3>
-                <p>Une application utilisant une API en temps réel pour afficher la météo mondiale.</p>
+                <h3 data-i18n="projet.card5.title">Application Météo</h3>
+                <p data-i18n="projet.card5.desc">Une application utilisant une API en temps réel pour afficher la météo mondiale.</p>
 
                 <div class="tags">
                     <span>JavaScript</span>
@@ -123,8 +124,8 @@
                 </div>
 
                 <div class="links">
-    <a href="#"><i class="fa-brands fa-github"></i> Code</a>
-    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Démo</a>
+    <a href="#" data-i18n="common.code"><i class="fa-brands fa-github"></i> Code</a>
+    <a href="#" data-i18n="common.demo"><i class="fa-solid fa-arrow-up-right-from-square"></i> Démo</a>
 </div>
             </div>
         </div>
@@ -133,8 +134,8 @@
         <div class="card">
             <img src="Image/maquette mobile UI.JPG" alt="">
             <div class="card-content">
-                <h3>Maquette Mobile UI</h3>
-                <p>Conception d'une interface utilisateur moderne pour une application de fitness.</p>
+                <h3 data-i18n="projet.card6.title">Maquette Mobile UI</h3>
+                <p data-i18n="projet.card6.desc">Conception d'une interface utilisateur moderne pour une application de fitness.</p>
 
                 <div class="tags">
                     <span>Figma</span>
@@ -142,8 +143,8 @@
                 </div>
 
                <div class="links">
-    <a href="#"><i class="fa-brands fa-github"></i> Design</a>
-    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Aperçu</a>
+    <a href="#" data-i18n="common.design"><i class="fa-brands fa-github"></i> Design</a>
+    <a href="#" data-i18n="common.preview"><i class="fa-solid fa-arrow-up-right-from-square"></i> Aperçu</a>
 </div>
                 </div>
             </div>
@@ -160,5 +161,6 @@
             <img src="Image/téléchargement (1).png" alt="logo X" width="35">
     </div>
 </footer>
+<script src="JS/i18n.js"></script>
 </body>
 </html>

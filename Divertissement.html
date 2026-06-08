@@ -10,26 +10,27 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body data-page="divertissement">
 <header>
     <div>
         <a href="">Mon portfolio</a>
     </div>
     <nav>
         <ul>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="projet.html">Projet</a></li>
-            <li><a href="passion.html">Passion</a></li>
-            <li><a href="Divertissement.html" class="active">Divertissement</a></li>
-            <li><a href="contact.html" >contact</a></li>
+            <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+            <li><a href="projet.html" data-i18n="nav.projects">Projet</a></li>
+            <li><a href="passion.html" data-i18n="nav.passion">Passion</a></li>
+            <li><a href="Divertissement.html" class="active" data-i18n="nav.entertainment">Divertissement</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">contact</a></li>
         </ul>
     </nav>
+    <button id="theme-toggle" class="theme-toggle-button">Changer l'apparence</button>
 </header>
 <main>
    <main>
     <section class="div-hero">
-        <h2>Mes Divertissements</h2>
-        <p>Ce qui m’inspire, me détend et nourrit ma créativité</p>
+        <h2 data-i18n="divertissement.hero.title">Mes Divertissements</h2>
+        <p data-i18n="divertissement.hero.subtitle">Ce qui m’inspire, me détend et nourrit ma créativité</p>
     </section>
 
     <section class="divertissement">
@@ -38,32 +39,32 @@
             <div class="div-card">
                 <img src="Image/Cinematic Excellence_ Explore Our Stunning Collection of Creed 3 Wallpapers iphone wallpaper.jpeg" alt="">
                 <div class="overlay">
-                    <h2>🎬 Films & Séries</h2>
-                    <p>Des histoires captivantes qui stimulent mon imagination.</p>
+                    <h2 data-i18n="divertissement.card1.title">🎬 Films & Séries</h2>
+                    <p data-i18n="divertissement.card1.text">Des histoires captivantes qui stimulent mon imagination.</p>
                 </div>
             </div>
 
             <div class="div-card">
                 <img src="Image/poa fally ipupa _ Pianogal2008.jpeg" alt="">
                 <div class="overlay">
-                    <h2>🎧 Musique audio </h2>
-                    <p>Une source d’énergie et de concentration au quotidien.</p>
+                    <h2 data-i18n="divertissement.card2.title">🎧 Musique audio </h2>
+                    <p data-i18n="divertissement.card2.text">Une source d’énergie et de concentration au quotidien.</p>
                 </div>
             </div>
 
             <div class="div-card">
                 <img src="Image/FC2K26.jpeg" alt="">
                 <div class="overlay">
-                    <h2>🎮 Jeux vidéo</h2>
-                    <p>Développement de la stratégie et de la logique.</p>
+                    <h2 data-i18n="divertissement.card3.title">🎮 Jeux vidéo</h2>
+                    <p data-i18n="divertissement.card3.text">Développement de la stratégie et de la logique.</p>
                 </div>
             </div>
 
             <div class="div-card">
                 <img src="Image/web & tech.jpeg" alt="">
                 <div class="overlay">
-                    <h2>🌐 Web & Tech</h2>
-                    <p>Explorer les innovations et apprendre constamment.</p>
+                    <h2 data-i18n="divertissement.card4.title">🌐 Web & Tech</h2>
+                    <p data-i18n="divertissement.card4.text">Explorer les innovations et apprendre constamment.</p>
                 </div>
             </div>
 
@@ -79,5 +80,6 @@
             <img src="Image/téléchargement (1).png" alt="logo X" width="35">
     </div>
 </footer>
+<script src="JS/i18n.js"></script>
 </body>
 </html>

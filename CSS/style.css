@@ -1,12 +1,26 @@
 :root{
-    --violet-doux:#6C63FF;
-    --violet-fonce:#5343DD;
-    --orange-vif:#FFA726;
-    --gris-tres-fonce:#333;
-    --gris-fonce:#666;
-    --gris-tres-clair:#F8F8F8;
-    --gris-clair:#EEE;
+    --violet-doux:#8B5CF6;
+    --violet-fonce:#7C3AED;
+    --orange-vif:#F97316;
+    --gris-tres-fonce:#E5E7EB;
+    --gris-fonce:#CBD5E1;
+    --gris-tres-clair:#27272A;
+    --gris-clair:#0F172A;
+    --background:#090B13;
+    --surface:#111827;
+    --surface-soft:#1F2937;
+    --border:#334155;
+    --shadow:0 10px 30px rgba(0,0,0,0.35);
+}
 
+body.light-theme {
+    --background: #F8FAFC;
+    --surface: #FFFFFF;
+    --surface-soft: #F1F5F9;
+    --gris-tres-fonce: #111827;
+    --gris-fonce: #334155;
+    --gris-clair: #CBD5E1;
+    --border: #E2E8F0;
 }
 *{
   margin: 0;
@@ -15,14 +29,15 @@
   
 }
 body{
-    background-color: var(--gris-clair);
+    background-color: var(--background);
+    color: var(--gris-tres-fonce);
     font-family: Roboto,sans-serif;
     line-height: 1.6;
 
 }
 header{
-    background-color: white;
-    box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.05);
+    background-color: var(--surface);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -115,7 +130,7 @@ section.hero{
     letter-spacing: 1.1px;
     font-weight: 600;
     margin-top: 1rem;
-    transition:backround-color 0.3s ease, transform: 0.2s ease ;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 .hero a:hover {
     background-color: var(--violet-fonce);
@@ -149,12 +164,143 @@ section h2::after {
     font-size: 1.2rem;
 }
 
+.language-settings {
+    max-width: 720px;
+    margin: 0 auto 1.5rem;
+    text-align: left;
+}
+
+.language-settings label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--gris-fonce);
+    font-weight: 600;
+}
+
+.language-settings select {
+    width: 100%;
+    max-width: 320px;
+    padding: 0.9rem 1rem;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background-color: var(--surface);
+    color: var(--gris-tres-fonce);
+    margin-bottom: 0.75rem;
+}
+
+.language-settings p {
+    color: var(--gris-clair);
+}
+
+.options-list {
+    text-align: left;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.theme-toggle-button {
+    display: inline-block;
+    margin: 1.5rem 0;
+    padding: 0.95rem 1.5rem;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background-color: var(--surface-soft);
+    color: var(--gris-tres-fonce);
+    cursor: pointer;
+    transition: background-color 0.25s ease, transform 0.2s ease;
+}
+
+.theme-toggle-button:hover {
+    background-color: var(--violet-doux);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.options-list h3 {
+    color: var(--violet-doux);
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.options-list p {
+    color: var(--gris-clair);
+    line-height: 1.8;
+}
+
+.projects-container {
+    display: grid;
+    gap: 2rem;
+    padding: 2rem 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.card {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1.5rem;
+    color: var(--gris-tres-fonce);
+}
+
+.card-content h3 {
+    margin-bottom: 1rem;
+    color: var(--violet-doux);
+}
+
+.card-content p {
+    margin-bottom: 1rem;
+    color: var(--gris-fonce);
+}
+
+.tags span {
+    display: inline-block;
+    background-color: rgba(139, 92, 246, 0.12);
+    color: var(--gris-tres-fonce);
+    padding: 0.35rem 0.8rem;
+    border-radius: 999px;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.links a {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.08);
+    color: var(--gris-tres-fonce);
+    padding: 0.9rem 1.2rem;
+    border-radius: 10px;
+    transition: background-color 0.2s ease;
+}
+
+.links a:hover {
+    background-color: rgba(139, 92, 246, 0.2);
+    color: white;
+}
+
 .compétences table {
     width: 80%;
     margin: 0 auto;
     border-collapse: collapse;
-    background-color: #fff;
-    box-shadow: 0 5px 15px rgba(0, 0,  0, 0.08);
+    background-color: var(--surface);
+    box-shadow: var(--shadow);
     border-radius: 10px;
     overflow: hidden;
 }
@@ -173,29 +319,27 @@ section h2::after {
 
 .compétences table tbody td{
     /* ajoute une bordure de 1px en bas de chaque cellule */ 
-    border-bottom: 1px solid var(--gris-clair);
+    border-bottom: 1px solid var(--border);
 }
 
-.compétences table tbody tr:nth-child {
-    background-color: #fdfdfd;
-}
 .compétences table tbody tr{
+    background-color: var(--surface);
     transition: background-color 0.3s ease;
 }
 .compétences table tbody tr:hover {
-    background-color: #f0f0f0;
+    background-color: var(--surface-soft);
 }
 .compétences table thead th {
     text-align: left;
 }
 footer{
     margin-top: 3rem;
-    background-color: var(--violet-doux);
+    background-color: var(--surface);
     padding: 3rem 0;
     text-align: center;
 }
 footer p {
-    color: white;
+    color: var(--gris-tres-fonce);
     margin-bottom: 1.2rem;
 }
 footer div {
@@ -229,10 +373,10 @@ footer div:hover {
 
 .contact-form {
     flex: 1;
-    background-color: #fff;
+    background-color: var(--surface);
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.18);
 }
 
 .form-group {
@@ -313,10 +457,10 @@ footer div:hover {
 
 .contact-info, .contact-form {
     flex: 1;
-    background: #fff;
+    background: var(--surface);
     padding: 2rem;
     border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.18);
     min-width: 300px;
 }
 
@@ -371,12 +515,12 @@ footer div:hover {
 .projects {
     text-align: center;
     padding: 60px 10%;
-    background: #f8f9fb;
+    background: var(--background);
 }
 
 .projects h2 {
     font-size: 32px;
-    color: #6c63ff;
+    color: var(--violet-doux);
 }
 
 .projects-container {
@@ -386,11 +530,11 @@ footer div:hover {
 }
 
 .card {
-    background: #fff;
+    background: var(--surface);
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-    transition: 0.3s;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.24);
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .card:hover {
@@ -409,13 +553,13 @@ footer div:hover {
 }
 
 .card-content h3 {
-    color: #6c63ff;
+    color: var(--violet-doux);
     margin-bottom: 10px;
 }
 
 .card-content p {
     font-size: 14px;
-    color: #555;
+    color: var(--gris-fonce);
     margin-bottom: 15px;
 }
 
@@ -425,8 +569,8 @@ footer div:hover {
 
 .tags span {
     display: inline-block;
-    background: #eef0ff;
-    color: #6c63ff;
+    background: rgba(139, 92, 246, 0.12);
+    color: var(--gris-tres-fonce);
     padding: 5px 10px;
     margin-right: 5px;
     border-radius: 10px;
@@ -440,13 +584,13 @@ footer div:hover {
 
 .links a {
     text-decoration: none;
-    color: #333;
+    color: var(--gris-tres-fonce);
     font-size: 14px;
-    transition: 0.3s;
+    transition: color 0.3s ease;
 }
 
 .links a:hover {
-    color: #6c63ff;
+    color: var(--violet-doux);
 }
 /*CONTACTS*/
 .contact-info a {
@@ -474,10 +618,10 @@ footer div:hover {
 }
 
 .contact-card {
-    background: white;
+    background: var(--surface);
     padding: 2rem;
     border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.18);
     width: 320px;
     text-align: left;
 }
@@ -525,8 +669,10 @@ footer div:hover {
     padding: 10px;
     margin-top: 5px;
     margin-bottom: 15px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--border);
     border-radius: 8px;
+    background: var(--surface-soft);
+    color: var(--gris-tres-fonce);
 }
 
 .contact-card button {
@@ -560,7 +706,7 @@ footer div:hover {
 /* HERO DIVERTISSEMENT */
 .div-hero {
     height: 40vh;
-    background:var(--gris-clair);
+    background: var(--surface);
     color: white;
     display: flex;
     flex-direction: column;
@@ -748,8 +894,8 @@ footer div:hover {
     margin-bottom: 3rem;
     padding: 1.5rem;
     border-radius: 15px;
-    background: white;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    background: var(--surface);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.18);
     transition: all 0.3s ease;
 }
 

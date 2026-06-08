@@ -10,35 +10,36 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body data-page="passion">
 <header>
     <div>
         <a href="">Mon portfolio</a>
     </div>
     <nav>
         <ul>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="projet.html">Projet</a></li>
-            <li><a href="passion.html" class="active">Passion</a></li>
-            <li><a href="Divertissement.html">Divertissement</a></li>
-            <li><a href="contact.html" >contact</a></li>
+            <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+            <li><a href="projet.html" data-i18n="nav.projects">Projet</a></li>
+            <li><a href="passion.html" class="active" data-i18n="nav.passion">Passion</a></li>
+            <li><a href="Divertissement.html" data-i18n="nav.entertainment">Divertissement</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">contact</a></li>
         </ul>
     </nav>
+    <button id="theme-toggle" class="theme-toggle-button">Changer l'apparence</button>
 </header>
 <main>
     <main>
 
     <section class="passion-hero">
-        <h2>Mes Passions</h2>
-        <p>Ce qui me motive au quotidien</p>
+        <h2 data-i18n="passion.hero.title">Mes Passions</h2>
+        <p data-i18n="passion.hero.subtitle">Ce qui me motive au quotidien</p>
     </section>
 
     <section class="passion">
 
         <div class="passion-item">
             <div class="text">
-                <h2>💻 DEVELOPPEMENT WEB</h2>
-                <p>Créer des sites modernes et interactifs est une vraie passion pour moi.</p>
+                <h2 data-i18n="passion.item1.title">💻 DEVELOPPEMENT WEB</h2>
+                <p data-i18n="passion.item1.text">Créer des sites modernes et interactifs est une vraie passion pour moi.</p>
             </div>
             <div class="image">
                 <img src="Image/🔹 Core Concepts of Programming_ A Beginner’s Guide 🚀 (1).jpeg" alt="">
@@ -47,8 +48,8 @@
 
         <div class="passion-item reverse">
             <div class="text">
-                <h2>🎨 DESIGN</h2>
-                <p>J’aime créer des interfaces belles et faciles à utiliser.</p>
+                <h2 data-i18n="passion.item2.title">🎨 DESIGN</h2>
+                <p data-i18n="passion.item2.text">J’aime créer des interfaces belles et faciles à utiliser.</p>
             </div>
             <div class="image">
                 <img src="Image/DESIGN.jpeg" alt="">
@@ -57,8 +58,8 @@
 
         <div class="passion-item">
             <div class="text">
-                <h2>🚀 TECHNOLOGIE</h2>
-                <p>Je suis curieux des nouvelles innovations et du futur.</p>
+                <h2 data-i18n="passion.item3.title">🚀 TECHNOLOGIE</h2>
+                <p data-i18n="passion.item3.text">Je suis curieux des nouvelles innovations et du futur.</p>
             </div>
             <div class="image">
                 <img src="Image/Ваш виртуальный контент-менеджер_ как сократить время на соцсети с помощью ИИ-аватара.jpeg" alt="">
@@ -67,8 +68,8 @@
         
         <div class="passion-item reverse">
             <div class="text">
-                <h2>⚽ SPORT</h2>
-                <p>Le sport fait partie de mon quotidien. Il me permet de rester en forme, de me discipliner et de développer un esprit de compétition.</p>
+                <h2 data-i18n="passion.item4.title">⚽ SPORT</h2>
+                <p data-i18n="passion.item4.text">Le sport fait partie de mon quotidien. Il me permet de rester en forme, de me discipliner et de développer un esprit de compétition.</p>
             </div>
             <div class="image">
                 <img src="Image/FOOTBALL.jpeg" alt="">
@@ -87,5 +88,6 @@
             <img src="Image/téléchargement (1).png" alt="logo X" width="35">
     </div>
 </footer>
+<script src="JS/i18n.js"></script>
 </body>
 </html>

@@ -10,39 +10,39 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body data-page="contact">
 <header>
     <div>
         <a href="">Mon portfolio</a>
     </div>
     <nav>
         <ul>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="projet.html">Projet</a></li>
-            <li><a href="passion.html">Passion</a></li>
-            <li><a href="Divertissement.html">Divertissement</a></li>
-            <li><a href="contact.html" class="active">contact</a></li>
+            <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+            <li><a href="projet.html" data-i18n="nav.projects">Projet</a></li>
+            <li><a href="passion.html" data-i18n="nav.passion">Passion</a></li>
+            <li><a href="Divertissement.html" data-i18n="nav.entertainment">Divertissement</a></li>
+            <li><a href="contact.html" class="active" data-i18n="nav.contact">contact</a></li>
         </ul>
     </nav>
+    <button id="theme-toggle" class="theme-toggle-button">Changer l'apparence</button>
 </header>
 <main>
-    <main>
     <section class="contact">
-        <h2>Contactez-Nous</h2>
+        <h2 data-i18n="contact.title">Contactez-Nous</h2>
 
         <div class="contact-container">
 
             <!-- Infos -->
             <div class="contact-card">
-                <h2>Mes coordonnées</h2>
+                <h2 data-i18n="contact.infoHeading">Mes coordonnées</h2>
 
-                <p>📍 Lubumbashi, RDC</p>
+                <p data-i18n="contact.location">📍 Lubumbashi, RDC</p>
 
-                <a class="btn-whatsapp" href="https://wa.me/243998608225" target="_blank">
+                <a class="btn-whatsapp" href="https://wa.me/243998608225" target="_blank" data-i18n="contact.whatsapp">
                     💬 Me contacter sur WhatsApp
                 </a>
 
-                <a class="btn-telegram" href="https://t.me/998608225" target="_blank">
+                <a class="btn-telegram" href="https://t.me/998608225" target="_blank" data-i18n="contact.telegram">
                     ✈️ Me contacter sur Telegram
                 </a>
 
@@ -50,15 +50,15 @@
 
             <!-- Formulaire -->
             <form class="contact-card">
-                <h2>Envoyer un message</h2>
+                <h2 data-i18n="contact.messageHeading">Envoyer un message</h2>
 
-                <label>Nom</label>
-                <input type="text" placeholder="Votre nom" required>
+                <label data-i18n="contact.nameLabel">Nom</label>
+                <input type="text" placeholder="Votre nom" data-i18n-attr="placeholder" data-i18n="contact.namePlaceholder" required>
 
-                <label>Téléphone</label>
-                <input type="tel" placeholder="Votre numéro" required>
+                <label data-i18n="contact.phoneLabel">Téléphone</label>
+                <input type="tel" placeholder="Votre numéro" data-i18n-attr="placeholder" data-i18n="contact.phonePlaceholder" required>
 
-                <button type="submit">Envoyer</button>
+                <button type="submit" data-i18n="contact.sendButton">Envoyer</button>
             </form>
 
         </div>
@@ -66,12 +66,13 @@
 </main>
 </main>
 <footer>
-    <p>&copy;2026 GLOIRE KASONGO . Tous droits reservés</p>
+    <p data-i18n="common.footer">&copy;2026 GLOIRE KASONGO . Tous droits reservés</p>
     <div>
             <img src="Image/logo linux.png" alt="logo linux"width=30>
             <img src="Image/images.png" alt="Logo github"width=30>
             <img src="Image/téléchargement (1).png" alt="logo X" width="35">
     </div>
 </footer>
+<script src="JS/i18n.js"></script>
 </body>
 </html>

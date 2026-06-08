@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Options</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body data-page="options">
+<header>
+    <div>
+        <a href="index.html">Mon portfolio</a>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+            <li><a href="projet.html" data-i18n="nav.projects">Projet</a></li>
+            <li><a href="passion.html" data-i18n="nav.passion">Passion</a></li>
+            <li><a href="Divertissement.html" data-i18n="nav.entertainment">Divertissement</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">contact</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <section class="apropos">
+        <h2 id="display-title" data-i18n="options.title">Affichage</h2>
+        <p data-i18n="options.welcome">Bienvenue dans l’espace d’affichage. Ici sont regroupées toutes les informations liées au thème, aux couleurs et à l’apparence du site.</p>
+        <div class="language-settings">
+            <label for="language-select" data-i18n="common.languageLabel">Gestion de la langue :</label>
+            <select id="language-select">
+                <option value="auto" data-i18n="common.auto">Détection automatique</option>
+                <option value="fr" data-i18n="common.french">Français</option>
+                <option value="en" data-i18n="common.english">English</option>
+                <option value="es" data-i18n="common.spanish">Español</option>
+            </select>
+            <p id="language-note">Langue détectée : ...</p>
+        </div>
+        <div class="options-list">
+            <button id="theme-toggle" class="theme-toggle-button">Activer le mode clair</button>
+            <h3 id="theme-heading" data-i18n="options.themeHeading">Thème</h3>
+            <p id="theme-text" data-i18n="options.themeText">Le portfolio utilise un mode sombre moderne avec un fond foncé et des textes clairs pour un meilleur contraste.</p>
+            <h3 id="color-heading" data-i18n="options.colorHeading">Couleurs</h3>
+            <p id="color-text" data-i18n="options.colorText">Les couleurs principales sont le violet pour les accents, le gris pour le texte et des surfaces profondes pour les sections.</p>
+            <h3 id="font-heading" data-i18n="options.fontHeading">Typographie</h3>
+            <p id="font-text" data-i18n="options.fontText">La police Roboto est choisie pour une lecture nette et un rendu professionnel sur tous les écrans.</p>
+            <h3 id="layout-heading" data-i18n="options.layoutHeading">Mise en page</h3>
+            <p id="layout-text" data-i18n="options.layoutText">Les contenus sont organisés en sections centrées et en cartes, avec un menu de navigation clair en haut de la page.</p>
+        </div>
+    </section>
+</main>
+<footer>
+    <p data-i18n="common.footer">&copy;2026 GLOIRE KASONGO . Tous droits reservés</p>
+    <div>
+        <img src="Image/logo linux.png" alt="logo linux" width="30">
+        <img src="Image/images.png" alt="Logo github" width="30">
+        <img src="Image/téléchargement (1).png" alt="logo X" width="35">
+    </div>
+</footer>
+<script>
+    const toggleButton = document.getElementById('theme-toggle');
+    const languageSelect = document.getElementById('language-select');
+    const languageNote = document.getElementById('language-note');
+    const displayTitle = document.getElementById('display-title');
+    const themeHeading = document.getElementById('theme-heading');
+    const themeText = document.getElementById('theme-text');
+    const colorHeading = document.getElementById('color-heading');
+    const colorText = document.getElementById('color-text');
+    const fontHeading = document.getElementById('font-heading');
+    const fontText = document.getElementById('font-text');
+    const layoutHeading = document.getElementById('layout-heading');
+    const layoutText = document.getElementById('layout-text');
+
+    const translations = {
+        fr: {
+            pageTitle: 'Affichage',
+            noteAuto: 'Langue détectée : Français',
+            noteManual: 'Langue active : Français',
+            themeButton: 'Activer le mode clair',
+            themeHeading: 'Thème',
+            themeText: 'Le portfolio utilise un mode sombre moderne avec un fond foncé et des textes clairs pour un meilleur contraste.',
+            colorHeading: 'Couleurs',
+            colorText: 'Les couleurs principales sont le violet pour les accents, le gris pour le texte et des surfaces profondes pour les sections.',
+            fontHeading: 'Typographie',
+            fontText: 'La police Roboto est choisie pour une lecture nette et un rendu professionnel sur tous les écrans.',
+            layoutHeading: 'Mise en page',
+            layoutText: 'Les contenus sont organisés en sections centrées et en cartes, avec un menu de navigation clair en haut de la page.'
+        },
+        en: {
+            pageTitle: 'Display',
+            noteAuto: 'Detected language: English',
+            noteManual: 'Active language: English',
+            themeButton: 'Enable light mode',
+            themeHeading: 'Theme',
+            themeText: 'The portfolio uses a modern dark mode with a dark background and light text for better contrast.',
+            colorHeading: 'Colors',
+            colorText: 'The main colors are purple for accents, gray for text, and deep surfaces for sections.',
+            fontHeading: 'Typography',
+            fontText: 'Roboto font is chosen for clear reading and a professional appearance on all screens.',
+            layoutHeading: 'Layout',
+            layoutText: 'Contents are organized into centered sections and cards, with a clear navigation menu at the top of the page.'
+        },
+        es: {
+            pageTitle: 'Visualización',
+            noteAuto: 'Idioma detectado: Español',
+            noteManual: 'Idioma activo: Español',
+            themeButton: 'Activar modo claro',
+            themeHeading: 'Tema',
+            themeText: 'El portafolio utiliza un modo oscuro moderno con fondo oscuro y texto claro para mejor contraste.',
+            colorHeading: 'Colores',
+            colorText: 'Los colores principales son púrpura para los acentos, gris para el texto y superficies profundas para secciones.',
+            fontHeading: 'Tipografía',
+            fontText: 'La fuente Roboto se elige para una lectura nítida y una apariencia profesional en todas las pantallas.',
+            layoutHeading: 'Diseño',
+            layoutText: 'Los contenidos están organizados en secciones centradas y tarjetas, con un menú de navegación claro en la parte superior de la página.'
+        }
+    };
+
+    function getDetectedLanguage() {
+        const browserLang = (navigator.languages && navigator.languages[0]) || navigator.language || 'en';
+        if (browserLang.startsWith('fr')) return 'fr';
+        if (browserLang.startsWith('es')) return 'es';
+        return 'en';
+    }
+
+    function setLanguageText(lang, autoDetected) {
+        const translation = translations[lang] || translations.en;
+        displayTitle.textContent = translation.pageTitle;
+        themeHeading.textContent = translation.themeHeading;
+        themeText.textContent = translation.themeText;
+        colorHeading.textContent = translation.colorHeading;
+        colorText.textContent = translation.colorText;
+        fontHeading.textContent = translation.fontHeading;
+        fontText.textContent = translation.fontText;
+        layoutHeading.textContent = translation.layoutHeading;
+        layoutText.textContent = translation.layoutText;
+        toggleButton.textContent = translation.themeButton;
+        languageNote.textContent = autoDetected ? translation.noteAuto : translation.noteManual;
+    }
+
+    function applyTheme(theme) {
+        document.body.classList.toggle('light-theme', theme === 'light');
+        localStorage.setItem('theme', theme);
+        const currentLang = languageSelect.value === 'auto' ? getDetectedLanguage() : languageSelect.value;
+        setLanguageText(currentLang, languageSelect.value === 'auto');
+    }
+
+    function applyLanguageChoice(choice) {
+        const detected = getDetectedLanguage();
+        const language = choice === 'auto' ? detected : choice;
+        if (choice === 'auto') {
+            localStorage.removeItem('preferredLanguage');
+        } else {
+            localStorage.setItem('preferredLanguage', choice);
+        }
+        setLanguageText(language, choice === 'auto');
+    }
+
+    function initializeLanguage() {
+        const preferred = localStorage.getItem('preferredLanguage') || 'auto';
+        languageSelect.value = preferred;
+        applyLanguageChoice(preferred);
+    }
+
+    initializeLanguage();
+
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    applyTheme(savedTheme);
+
+    languageSelect.addEventListener('change', () => {
+        applyLanguageChoice(languageSelect.value);
+    });
+
+    toggleButton.addEventListener('click', () => {
+        const newTheme = document.body.classList.contains('light-theme') ? 'dark' : 'light';
+        applyTheme(newTheme);
+    });
+</script>
+</body>
+</html>

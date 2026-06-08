@@ -10,68 +10,69 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body data-page="index">
 <header>
     <div>
         <a href="">Mon portfolio</a>
     </div>
     <nav>
         <ul>
-            <li><a href="index.html" class="active">Accueil</a></li>
-            <li><a href="projet.html">Projet</a></li>
-            <li><a href="passion.html">Passion</a></li>
-            <li><a href="Divertissement.html">Divertissement</a></li>
-            <li><a href="contact.html">contact</a></li>
+            <li><a href="index.html" class="active" data-i18n="nav.home">Accueil</a></li>
+            <li><a href="projet.html" data-i18n="nav.projects">Projet</a></li>
+            <li><a href="passion.html" data-i18n="nav.passion">Passion</a></li>
+            <li><a href="Divertissement.html" data-i18n="nav.entertainment">Divertissement</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">contact</a></li>
         </ul>
     </nav>
+    <button id="theme-toggle" class="theme-toggle-button">Changer l'apparence</button>
 </header>
 <main>
     <section class="hero">
         <div>
-            <h1>Bonjour, je suis Gloire</h1>
-            <p>Etudiant en L2 et passioné par le web</p>
-            <a href="projet.html">Voir mes Projets</a>
+            <h1 data-i18n="index.hero.title">Bonjour, je suis Gloire</h1>
+            <p data-i18n="index.hero.subtitle">Etudiant en L2 et passioné par le web</p>
+            <a href="projet.html" data-i18n="index.hero.button">Voir mes Projets</a>
         </div>
         <div>
             <img src="Image/fd9a3076-8b1c-479c-b5e6-2db28c06cd2b.JPG" alt="ma photo" width="300">
         </div>
     </section>
     <section class="apropos">
-        <h2>À propos de moi</h2>
-        <p>Bonjour ! Je m'appelle Gloire KASONGO et je suis un étudiant dynamique et motivé en Informatique à UDBL. Passionné par le développement web, l'intelligence artificielle, et le design graphique, je suis constamment à la recherche de nouvelles opportunités d'apprentissage et de défis stimulants.</p>
-        <P>Au cours de mes études, j'ai développé de solides compétences en programmation. Je suis une personne rigoureuse, créative et j'aime travailler en équipe pour atteindre des objectifs communs. Mon objectif est de contribuer à des projets innovants, trouver un stage, et maitriser le Framework Laravel.</P>
+        <h2 data-i18n="index.about.title">À propos de moi</h2>
+        <p data-i18n="index.about.p1">Bonjour ! Je m'appelle Gloire KASONGO et je suis un étudiant dynamique et motivé en Informatique à UDBL. Passionné par le développement web, l'intelligence artificielle, et le design graphique, je suis constamment à la recherche de nouvelles opportunités d'apprentissage et de défis stimulants.</p>
+        <p data-i18n="index.about.p2">Au cours de mes études, j'ai développé de solides compétences en programmation. Je suis une personne rigoureuse, créative et j'aime travailler en équipe pour atteindre des objectifs communs. Mon objectif est de contribuer à des projets innovants, trouver un stage, et maitriser le Framework Laravel.</p>
     </section>
     <section class="compétences">
-        <h2>Mes compétences</h2>
+        <h2 data-i18n="index.skills.title">Mes compétences</h2>
         <table>
             <thead>
              <tr>
-                <th>CATEGORIE</th>
-                <th>COMPETENCE</th>
-                <th>NIVEAU</th>
+                <th data-i18n="index.skills.headerCategory">CATEGORIE</th>
+                <th data-i18n="index.skills.headerSkill">COMPETENCE</th>
+                <th data-i18n="index.skills.headerLevel">NIVEAU</th>
              </tr>
             </thead>
             <body>
                    
             <tr>
-                <td>programmation</td>
-                <td>HTML , css , JAVAScript , python</td>
-                <td>avancé</td>
+                <td data-i18n="index.skills.row1.c1">programmation</td>
+                <td data-i18n="index.skills.row1.c2">HTML , css , JAVAScript , python</td>
+                <td data-i18n="index.skills.row1.c3">avancé</td>
             </tr>
             <tr>
-                <td>design</td>
-                <td>Figma, Photoshop(bases)</td>
-                <td>avancé</td>
+                <td data-i18n="index.skills.row2.c1">design</td>
+                <td data-i18n="index.skills.row2.c2">Figma, Photoshop(bases)</td>
+                <td data-i18n="index.skills.row2.c3">avancé</td>
             </tr>
             <tr>
-                <td>langue</td>
-                <td>Francais (natif) , anglais(fluide)</td>
-                <td>avancé</td>
+                <td data-i18n="index.skills.row3.c1">langue</td>
+                <td data-i18n="index.skills.row3.c2">Francais (natif) , anglais(fluide)</td>
+                <td data-i18n="index.skills.row3.c3">avancé</td>
             </tr>
             <tr>
-                <td>soft skills</td>
-                <td>Communication , resolution de problemes , autonomie</td>
-                <td>Expert</td>
+                <td data-i18n="index.skills.row4.c1">soft skills</td>
+                <td data-i18n="index.skills.row4.c2">Communication , resolution de problemes , autonomie</td>
+                <td data-i18n="index.skills.row4.c3">Expert</td>
             </tr>
             <tbody>
 
@@ -88,5 +89,6 @@
             <img src="Image/téléchargement (1).png" alt="logo X" width="35">
     </div>
 </footer>
+<script src="JS/i18n.js"></script>
 </body>
 </html>
