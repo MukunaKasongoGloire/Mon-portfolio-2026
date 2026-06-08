@@ -518,6 +518,39 @@ footer div:hover {
     background: var(--background);
 }
 
+/* Responsive rules */
+@media (max-width: 1024px) {
+    header { padding: 1.5rem 2rem; }
+    .hero { gap: 2.5rem; margin: 6rem 1rem; }
+    .hero h1 { font-size: 3rem; }
+    .apropos { width: 90%; margin: 4rem auto; }
+    .projects { padding: 40px 5%; }
+}
+
+@media (max-width: 768px) {
+    header { flex-direction: column; align-items: flex-start; gap: 1rem; padding: 1rem; }
+    header nav ul { flex-wrap: wrap; gap: 0.5rem; }
+    header div a { font-size: 1.6rem; }
+    #theme-toggle { align-self: flex-end; }
+    .hero { flex-direction: column; text-align: center; margin: 3rem 1rem; }
+    .hero img { width: 180px; height: 180px; }
+    .hero h1 { font-size: 2rem; }
+    .apropos { width: 95%; margin: 2.5rem auto; }
+    .projects-container { grid-template-columns: 1fr; padding: 1rem; }
+    .card img { height: 160px; }
+    .contact-container { flex-direction: column; }
+    .contact-info, .contact-form { min-width: 100%; }
+}
+
+@media (max-width: 420px) {
+    header div a { font-size: 1.4rem; }
+    ul li a { font-size: 0.98rem; }
+    .hero img { width: 140px; height: 140px; }
+    .hero h1 { font-size: 1.6rem; }
+    .theme-toggle-button { padding: 0.6rem 1rem; font-size: 0.95rem; }
+    .apropos p, .hero { font-size: 1rem; }
+}
+
 .projects h2 {
     font-size: 32px;
     color: var(--violet-doux);
